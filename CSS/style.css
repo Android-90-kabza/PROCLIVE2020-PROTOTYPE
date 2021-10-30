@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+body{
+  background-color: #f1f1f1;
+}
+.wrapper {
+  display: grid;
+  gap: 20px;
+}
+/* Navigation section */
+.navCantainer{
+  display: grid ;
+  grid-gap: 20px;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.9s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #cc560a;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 35px;
+  font-size: 50px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .2s;
+  padding: 30px;
+  position: absolute;
+  top: 0;
+  right: 40px;
+
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/* Navigation Section ends */
+
+/* .header {
+  grid-column: 2 / 6;
+  grid-row: 2 / 3;
+  background-color: lime;
+}
+.aboutus {
+  grid-column: 2 / 6;
+  grid-row: 3 / 5;
+  background-color: gray;
+}
+.services {
+  grid-column: 2 / 6;
+  grid-row: 3;
+  background-color: black;
+}
+.gallery {
+  grid-column: 2;
+  grid-row: 4;
+  background-color: black;
+}
+.head1 {
+  grid-column: 3;
+  grid-row: 4;
+  background-color: darkgreen;
+}
+.head2 {
+  grid-column: 3;
+  grid-row: 4;
+  background-color: darkgreen;
+} */

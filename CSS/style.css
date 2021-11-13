@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
     
 }
 body{
@@ -12,20 +13,29 @@ body{
 }
 /* Navigation section */
 .navCantainer{
+
   display: grid ;
   grid-gap: 20px;
+
 }
 .sidenav {
+
   height: 100%;
-  width: 0;
+  width: 1000px;
   position: fixed;
-  z-index: 1;
+  z-index: 4;
   top: 0;
   right: 0;
   background-color: #111;
   overflow-x: hidden;
   transition: 0.9s;
   padding-top: 60px;
+  
+}
+.contactmesec{
+  border: 5px solid #cc560a;
+  height: auto;
+  width: 1000px;
 }
 
 .sidenav a {
@@ -36,6 +46,7 @@ body{
   display: block;
   transition: 0.3s;
 }
+
 
 .sidenav a:hover {
   color: #cc560a;
@@ -48,49 +59,225 @@ body{
   font-size: 50px;
   margin-left: 50px;
 }
-
+/* burger menu icon styling */
 #main {
   transition: margin-left .2s;
-  padding: 30px;
-  position: absolute;
+  padding: 10px;
+  position: fixed;
   top: 0;
   right: 40px;
+  z-index: 3;
+  background-color: #cc560a;
+  border: 5px solid #616161;
+  border-radius: 11px;
 
 }
+
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-/* Navigation Section ends */
+/* about us section */
+.aboutusContainer{
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-rows: 1fr 3fr;
+ 
+  border-radius: 20px;
+  border: 5px solid #606060 ;
+  margin: 0px 25px;
+  height: 85vh;
+}
+/* heading for the about us section */
+.head1{
+  padding: 10px;
+  color: #cc560a;
+  font-weight: 900;
+  font-size: 40px;
+  
+  /* grid-area: heading; */
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  
+}
 
-/* .header {
-  grid-column: 2 / 6;
+.aboutbg{
+  /* background: url(/images/MsokiFlooring.jpeg) no-repeat center fixed;  */
+  background-size: cover;
+  background-color: #cc560a;
+  border-radius: 25px;
+
+  z-index: -2;
+
+  /* grid-area: about; */
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+
+}
+
+.abouttext{
+  height: 90%;
+  width: 90%;
+  margin: 3% 5%;
+  
+
+  z-index: 1;
+  backdrop-filter: blur(60px);
+  border-radius: 50px;
+  border: 5px solid #606060;
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(46,54,68,0.03);
+  background-color: rgba(255,255,255, 0.2);
+}
+.ABT-text{
+  padding: 30px;
+  font-size: 38px;
+}
+/* services page */
+
+.servicesContainer{
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 2fr 2fr;
+  grid-template-rows: 1fr 2fr 2fr;
+
+
+  border-radius: 20px;
+  border: 5px solid #606060 ;
+  margin: 0px 25px;
+  height: 85vh;
+}
+/* 
+.servicesSec{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: 2fr 2fr;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+} 
+*/
+.one{
+  
+ grid-column: 2 / 3;
   grid-row: 2 / 3;
-  background-color: lime;
 }
-.aboutus {
-  grid-column: 2 / 6;
-  grid-row: 3 / 5;
-  background-color: gray;
+.two{
+ grid-column: 3 / 4;
+  grid-row: 2 / 3;
 }
-.services {
-  grid-column: 2 / 6;
-  grid-row: 3;
-  background-color: black;
+.three{
+ grid-column: 4 / 5;
+  grid-row: 2 / 3;
 }
-.gallery {
-  grid-column: 2;
-  grid-row: 4;
-  background-color: black;
+.four{
+ grid-column: 2 / 3;
+  grid-row: 3 / 4;
 }
-.head1 {
-  grid-column: 3;
-  grid-row: 4;
-  background-color: darkgreen;
+.five{
+ grid-column: 3 / 4;
+  grid-row: 3 / 4;
 }
-.head2 {
-  grid-column: 3;
-  grid-row: 4;
-  background-color: darkgreen;
-} */
+.six{
+ grid-column: 4 / 5;
+  grid-row: 3 / 4;
+}
+
+
+/* Gallery container */
+
+.galleryContainer{
+  display: grid;
+  /* grid-template-columns: 1fr 2fr 2fr;
+  grid-template-rows: 1fr 3fr; */
+
+  border-radius: 20px;
+  border: 5px solid #606060 ;
+  margin: 0px 25px;
+  height: 85vh;
+  
+}
+
+/* GALLERY SECTION */
+.galleryContainer{
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 2fr;
+  grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr 2fr;
+
+  overflow: auto;
+}
+.gallcon{
+   grid-column: 1 / 2;
+  grid-row: 1 / 2 ;
+  
+}
+.slideshow-container1{
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+} 
+.slideshow-container2{
+ grid-column: 2 / 4;
+  grid-row: 3 / 4;
+} 
+.slideshow-container3{
+   grid-column: 2 / 4;
+  grid-row: 4 / 5;
+
+} 
+.slideshow-container4{
+  grid-column: 2 / 4;
+  grid-row: 5 / 6 ;
+
+} 
+.slideshow-container5{
+grid-column: 2 / 4;
+  grid-row: 6 / 7;
+} 
+.slideshow-container6{
+grid-column: 2 / 4;
+  grid-row: 7 / 8;
+}
+
+.mySlides1, .mySlides2, .mySlides3 ,.mySlides4, .mySlides5, .mySlides6 {
+  display: none
+
+  /* grid-column: 4 / 5;
+  grid-row: 3 / 4; */
+
+}
+/* img {vertical-align: middle;} */
+
+/* Slideshow container */
+.slideshow-container1 ,.slideshow-container2 ,.slideshow-container3, 
+.slideshow-container4 ,.slideshow-container5 ,.slideshow-container6  {
+ border: 5px solid #cc560a;
+ border-radius: 25px;
+ 
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: #CC560A;
+  color: black;
+}

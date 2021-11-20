@@ -1,12 +1,19 @@
-function openNav() {
-    document.getElementById("mySidenav").style.width = "350px";
-    document.getElementById("main").style.marginLeft = "250px";
-}
+//NAVBAR SECTION
+const primaryNav = document.querySelector(".primary-navigation");
+const navToggle = document.querySelector(".mobile-nav-toggle");
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
-}
+navToggle.addEventListener('click', (e) => {
+    const visibility = primaryNav.getAttribute('data-visible');
+
+    if (visibility === "false") {
+        primaryNav.setAttribute("data-visible", true);
+        navToggle.setAttribute("aria-expand", true);
+    } else if (visibility === "true") {
+        primaryNav.setAttribute("data-visible", false);
+        navToggle.setAttribute("aria-expand", false);
+    }
+})
+
 // PORTFOLIO SECTION 
 var slideIndex = [1, 1, 1, 1, 1, 1];
 var slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5", "mySlides6"]
